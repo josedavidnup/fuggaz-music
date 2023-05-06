@@ -8,6 +8,7 @@ const getAlbums = async (req, res) => {
     return res.status(404).send('Albums not found');
   }
 };
+
 const getAlbum = async (req, res) => {
   try {
     const { id } = req.params;
@@ -17,6 +18,7 @@ const getAlbum = async (req, res) => {
     return res.status(404).send('Album not found');
   }
 };
+
 const createAlbum = async (req, res) => {
   try {
     const newAlbum = await new AlbumModel(req.body).save();
@@ -26,6 +28,7 @@ const createAlbum = async (req, res) => {
     return res.status(400).send('New Album failed');
   }
 };
+
 const deleteAlbum = async (req, res) => {
   try {
     const { id } = req.params;
@@ -35,6 +38,7 @@ const deleteAlbum = async (req, res) => {
     return res.status(400).send('Album delete failed');
   }
 };
+
 const updateAlbum = async (req, res) => {
   try {
     const { id } = req.params;
