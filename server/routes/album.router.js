@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 const {
   getAlbum,
@@ -6,12 +6,12 @@ const {
   createAlbum,
   deleteAlbum,
   updateAlbum,
-} = require('../services/album');
+} = require("../services/album.service");
 
-router.get('/albums', getAlbums);
-router.get('/album/:id', getAlbum);
-router.post('/create-album', createAlbum);
-router.delete('/delete-album/:id', deleteAlbum);
-router.put('/update-album/:id', updateAlbum);
+router.get("/albums", getAlbums);
+router.get("/album/:id", getAlbum);
+router.post("/create-album", createAlbum);
+router.delete("/delete-album/:id", deleteAlbum);
+router.put("/update-album/:id", updateAlbum);
 
 module.exports = router;

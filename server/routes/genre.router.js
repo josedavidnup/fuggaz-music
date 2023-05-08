@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 const {
   getGenres,
@@ -6,12 +6,12 @@ const {
   createGenre,
   deleteGenre,
   updateGenre,
-} = require('../services/genre');
+} = require("../services/genre.service");
 
-router.get('/genres', getGenres);
-router.get('/genre/:id', getGenre);
-router.post('/create-genre', createGenre);
-router.delete('/delete-genre/:id', deleteGenre);
-router.put('/update-genre/:id', updateGenre);
+router.get("/genres", getGenres);
+router.get("/genre/:id", getGenre);
+router.post("/create-genre", createGenre);
+router.delete("/delete-genre/:id", deleteGenre);
+router.put("/update-genre/:id", updateGenre);
 
 module.exports = router;
