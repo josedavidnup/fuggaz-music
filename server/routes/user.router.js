@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 const {
   getAllUsers,
@@ -6,16 +6,19 @@ const {
   getUserById,
   upDateUser,
   deleteUser,
-} = require("../services/users.service");
+  getUserByEmail,
+} = require('../services/users.service');
 
-router.get("/user", getAllUsers);
+router.get('/user', getAllUsers);
 
-router.get("/user/:id", getUserById);
+router.get('/user/:id', getUserById);
 
-router.post("/user", createUser);
+router.get('/user-email/:email', getUserByEmail);
 
-router.put("/user/:id", upDateUser);
+router.post('/user', createUser);
 
-router.delete("/user/:id", deleteUser);
+router.put('/user/:id', upDateUser);
+
+router.delete('/user/:id', deleteUser);
 
 module.exports = router;
